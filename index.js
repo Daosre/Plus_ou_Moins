@@ -25,18 +25,16 @@ function getRandomInt(min, max) {
 }
 
 let answer = getRandomInt(1, 101);
-let start = alert(answer);
-let issameNum = false;
+let start = alert("Ready?");
+let isSameNum = false;
 
-while (issameNum === false) {
+while (isSameNum === false) {
   let num = prompt("Trouve le nombre entre 1 et 100:");
   function userIntInput() {
-    console.log(num);
     if (answer === parseInt(num, 10)) {
-      console.log("Bravo ! C'était bien " + answer + " !");
-      issameNum = true;
-    } else console.log("Dommage ! Le nombre mystère était " + answer + " !");
+      alert("Bravo ! C'était bien " + answer + " !");
+      isSameNum = true;
+    } else alert("Dommage ! Le nombre mystère était " + answer + " !");
   }
-
   userIntInput();
 }
