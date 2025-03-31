@@ -19,23 +19,24 @@
 // 6. Bonus : proposer de rejouer
 
 function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
- 
-let answer = (getRandomInt(1, 101));
-console.log(answer); 
-
-
-let num = prompt("Trouve le nombre entre 1 et 100:");
-function userIntInput() {
-    console.log(num);
-    if (answer === parseInt(num, 10)) {
-        console.log("Bravo ! C'était bien " + answer + " !");
-    }
-    else console.log("Dommage ! Le nombre mystère était " + answer + " !");
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
-userIntInput();
+let answer = getRandomInt(1, 101);
+let start = alert(answer);
+let issameNum = false;
 
+while (issameNum === false) {
+  let num = prompt("Trouve le nombre entre 1 et 100:");
+  function userIntInput() {
+    console.log(num);
+    if (answer === parseInt(num, 10)) {
+      console.log("Bravo ! C'était bien " + answer + " !");
+      issameNum = true;
+    } else console.log("Dommage ! Le nombre mystère était " + answer + " !");
+  }
+
+  userIntInput();
+}
