@@ -18,7 +18,7 @@
 // 5. Afficher le nombre total de tentatives
 // 6. Bonus : proposer de rejouer
 
-//la boucle de la mort
+//la boucle de la mort (infinie)
 //let num = 0;
 //while (num != answer) {
   //  num = prompt("Trouve le nombre entre 1 et 100:");
@@ -93,6 +93,3 @@ function Game() {
 
 // Lancer le jeu
 Game();
-
-//a faire
-//Demander à l’utilisateur de choisir une borne minimale et une borne maximale en début de partie
